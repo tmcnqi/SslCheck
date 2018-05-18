@@ -1,0 +1,44 @@
+<!DOCTYPE html>  
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"  
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">  
+    <head>  
+        <title>https检测</title>  
+    </head>  
+    <body>  
+        <p th:text="${not_access_url}" style="color:#ff0000"></p> 
+         <li>检查SSL证书有效期：  
+            <table border="1">  
+              <tr>  
+                <th>域名</th>  
+                <th>起始时间</th>  
+                <th>结束时间</th> 
+                <th>校验</th>  
+              </tr>  
+              <tr  th:each="entity : ${list}">  
+               <!--  <td th:text="${user.userName}">Onions</td>  
+                <td th:text="${user.email}">test@test.com.cn</td>  
+                <td th:text="${user.isAdmin}">yes</td>  --> 
+                 <th th:text="${entity.domain}">状态变量：index</th>  
+                <th th:text="${entity.startTime}">状态变量：count</th>  
+                <th th:text="${entity.endTime}">状态变量：size</th>  
+                <th th:text="${entity.comment}">状态变量：size</th>  
+              </tr>  
+            </table>  
+        </li>   
+        
+         <li>工程状态监测：  
+            <table border="1">  
+              <tr>  
+                <th>url地址</th>  
+                <th>返回码</th>  
+                <th>描述</th> 
+              </tr>  
+              <tr  th:each="entity : ${project_list}">  
+                 <th th:text="${entity.url}"></th>  
+                <th th:text="${entity.code}"></th>  
+                <th th:text="${entity.comment}"></th>  
+              </tr>  
+            </table>  
+        </li>  
+    </body>  
+</html> 
