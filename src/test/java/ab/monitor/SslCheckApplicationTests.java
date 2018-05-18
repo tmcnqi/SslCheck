@@ -7,7 +7,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import ab.sslcheck.SslCheckApplication;
-import ab.sslcheck.SslCheckValid;
+import ab.sslcheck.service.SslCheckValidService;
 
 
 @RunWith(SpringRunner.class)
@@ -17,7 +17,7 @@ import ab.sslcheck.SslCheckValid;
 public class SslCheckApplicationTests {
 	
 	@Autowired
-	SslCheckValid sslCheckValid;
+	SslCheckValidService sslCheckValid;
 
 	@Test
 	public void contextLoads() {

@@ -1,4 +1,4 @@
-package ab.sslcheck;
+package ab.sslcheck.bean;
 
 import org.springframework.stereotype.Service;
 
@@ -10,9 +10,9 @@ import lombok.ToString;
 @Getter
 @ToString
 @Service
-public class DomainInfo {
-	String domain;
-	String startTime;
-	String endTime;
+public class UrlInfo {
+	String url;
+	int code;
 	String comment;
+
 }

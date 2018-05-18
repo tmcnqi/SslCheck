@@ -1,4 +1,4 @@
-package ab.sslcheck;
+package ab.sslcheck.service;
 
 import java.io.IOException;
 import java.net.MalformedURLException;
@@ -19,14 +19,16 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import ab.sslcheck.bean.DomainInfo;
+import ab.sslcheck.bean.Myconfig;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
 
 @Service("sslCheckValid")
-public class SslCheckValid {
-	protected static Logger logger=LoggerFactory.getLogger(SslCheckValid.class);  
+public class SslCheckValidService {
+	protected static Logger logger=LoggerFactory.getLogger(SslCheckValidService.class);  
 	
 	@Setter
 	@Getter

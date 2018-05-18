@@ -1,4 +1,4 @@
-package ab.sslcheck;
+package ab.sslcheck.service;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -12,14 +12,16 @@ import org.springframework.stereotype.Service;
 
 import com.alibaba.fastjson.JSONObject;
 
+import ab.sslcheck.bean.Myconfig;
+import ab.sslcheck.bean.UrlInfo;
 import ab.sslcheck.utils.HttpClientUtils;
 import ab.sslcheck.utils.ResponseUtils;
 import lombok.Getter;
 import lombok.Setter;
 
 @Service("sslCheckUrl")
-public class SslCheckUrl {
-	protected static Logger logger=LoggerFactory.getLogger(SslCheckValid.class);  
+public class SslCheckUrlService {
+	protected static Logger logger=LoggerFactory.getLogger(SslCheckValidService.class);  
 	
 	@Autowired
 	 Myconfig myConfig;

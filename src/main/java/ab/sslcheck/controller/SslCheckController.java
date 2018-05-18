@@ -12,10 +12,10 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import ab.sslcheck.DomainInfo;
-import ab.sslcheck.SslCheckUrl;
-import ab.sslcheck.SslCheckValid;
-import ab.sslcheck.UrlInfo;
+import ab.sslcheck.bean.DomainInfo;
+import ab.sslcheck.bean.UrlInfo;
+import ab.sslcheck.service.SslCheckUrlService;
+import ab.sslcheck.service.SslCheckValidService;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -23,11 +23,11 @@ import lombok.Setter;
 public class SslCheckController {
 	
 	@Autowired
-	SslCheckValid sslCheckValid;
+	SslCheckValidService sslCheckValid;
 	
 	
 	@Autowired
-	SslCheckUrl sslCheckUrl;
+	SslCheckUrlService sslCheckUrl;
 
 	@Setter
 	@Getter
